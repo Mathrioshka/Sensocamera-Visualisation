@@ -1,13 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Smakhtin\Documents\GitRepos\Sensocamera-Visualisation\Visualisator.v4p" systemname="Visualisator" filename="C:\Users\Smakhtin\Documents\GitRepos\Sensocamera-Visualisation\Visualisator.v4p">
-   <BOUNDS type="Window" left="3285" top="960" width="15435" height="11400">
+   <PATCH nodename="C:\Users\Smakhtin\Documents\GitRepos\Sensocamera-Visualisation\Controller.v4p" systemname="Visualisator" filename="C:\Users\Smakhtin\Documents\GitRepos\Sensocamera-Visualisation\Visualisator.v4p">
+   <BOUNDS type="Window" left="2610" top="1065" width="15435" height="11400">
    </BOUNDS>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="1">
    <BOUNDS type="Node" left="735" top="11055" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="735" top="11055" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="17385" top="1665" width="10935" height="6795">
+   <BOUNDS type="Window" left="17865" top="1380" width="10935" height="6795">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -359,11 +359,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="8790" top="5655" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="textures\ButtonGrid.png" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="textures\ButtonGrid.png">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="image.jpg" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="image.jpg">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="|All Pictures (*.bmp, *.dds, *.hdr, *.jpg, *.png, *.tif, *.tga)||*.bmp;*.dds;*.hdr;*.jpg;*.png;*.tif;*.tga||Bitmap (*.bmp)||*.bmp||HDR (*.hdr)||*.hdr||DDS (*.dds)||*.dds||JPG (*.jpg)||*.jpg||PNG (*.png)||*.png||TIFF (*.tif)||*.tif||Targa (*.tga)||*.tga|" encoded="0">
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="|All Pictures (*.bmp, *.dds, *.hdr, *.jpg, *.png, *.tif, *.tga)||*.bmp;*.dds;*.hdr;*.jpg;*.png;*.tif;*.tga||Bitmap (*.bmp)||*.bmp||HDR (*.hdr)||*.hdr||DDS (*.dds)||*.dds||JPG (*.jpg)||*.jpg||PNG (*.png)||*.png||TIFF (*.tif)||*.tif||Targa (*.tga)||*.tga|">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
@@ -381,7 +381,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
