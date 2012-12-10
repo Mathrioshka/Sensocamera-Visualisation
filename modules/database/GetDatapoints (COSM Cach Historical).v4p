@@ -7,7 +7,7 @@
    </BOUNDS>
    <PIN pinname="Connection" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Fields" slicecount="1" encoded="0" values="|at, value|" visible="1">
+   <PIN pinname="Fields" slicecount="1" encoded="0" visible="1" values="|at, value|">
    </PIN>
    <PIN pinname="Field Names" slicecount="1" encoded="0" values="|at,value|">
    </PIN>
@@ -145,7 +145,7 @@
    </PIN>
    <PIN pinname="Input 6" visible="1">
    </PIN>
-   <PIN pinname="Input 7" slicecount="1" values="|ORDER BY at ASC|" encoded="0">
+   <PIN pinname="Input 7" slicecount="1" encoded="0" values="|ORDER BY at ASC|">
    </PIN>
    </NODE>
    <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="9" dstpinname="Input 1">
@@ -211,7 +211,7 @@
    </PIN>
    <PIN pinname="Input 3" slicecount="1" encoded="0" values="&apos;">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="2012-12-01T14:01:00Z" encoded="0">
+   <PIN pinname="Input 2" visible="1" slicecount="1" encoded="0" values="2012-12-09T16:00:00Z">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -227,7 +227,7 @@
    </PIN>
    <PIN pinname="Input 3" slicecount="1" encoded="0" values="&apos;">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" encoded="0" values="2012-12-01T14:01:00Z">
+   <PIN pinname="Input 2" visible="1" slicecount="1" encoded="0" values="2012-12-09T16:30:00Z">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -252,160 +252,16 @@
    </LINK>
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="9" dstpinname="Input 6">
    </LINK>
-   <NODE systemname="DateFormatter (ISO8061)" filename="..\..\..\VVVV.Nodes.COSM\DateFormatter (ISO8061).v4p" nodename="DateFormatter (ISO8061)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="3750" top="2820" width="1380" height="270">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Year" visible="1">
-   </PIN>
-   <PIN pinname="Month" visible="1">
-   </PIN>
-   <PIN pinname="Day" visible="1">
-   </PIN>
-   <PIN pinname="Hour" visible="1">
-   </PIN>
-   <PIN pinname="Min" visible="1">
-   </PIN>
-   <PIN pinname="Sec" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="3750" top="2820">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="3750" top="2415" width="1380" height="270">
-   </BOUNDS>
-   <PIN pinname="Output Count" slicecount="1" values="6">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 2" visible="1">
-   </PIN>
-   <PIN pinname="Output 3" visible="1">
-   </PIN>
-   <PIN pinname="Output 4" visible="1">
-   </PIN>
-   <PIN pinname="Output 5" visible="1">
-   </PIN>
-   <PIN pinname="Output 6" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="3750" top="2415">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="18" srcpinname="Output 1" dstnodeid="19" dstpinname="Year">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Output 2" dstnodeid="19" dstpinname="Month">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Output 3" dstnodeid="19" dstpinname="Day">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Output 4" dstnodeid="19" dstpinname="Hour">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Output 5" dstnodeid="19" dstpinname="Min">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Output 6" dstnodeid="19" dstpinname="Sec">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="15" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="20">
-   <BOUNDS type="Node" left="3750" top="120" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3750" top="120" width="1425" height="1815">
-   </BOUNDS>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="6">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Date From|" encoded="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input">
-   </LINK>
-   <NODE systemname="DateFormatter (ISO8061)" filename="..\..\..\VVVV.Nodes.COSM\DateFormatter (ISO8061).v4p" nodename="DateFormatter (ISO8061)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="5595" top="2820" width="1380" height="270">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Year" visible="1">
-   </PIN>
-   <PIN pinname="Month" visible="1">
-   </PIN>
-   <PIN pinname="Day" visible="1">
-   </PIN>
-   <PIN pinname="Hour" visible="1">
-   </PIN>
-   <PIN pinname="Min" visible="1">
-   </PIN>
-   <PIN pinname="Sec" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="5595" top="2820">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="5595" top="2415" width="1380" height="270">
-   </BOUNDS>
-   <PIN pinname="Output Count" slicecount="1" values="6">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 2" visible="1">
-   </PIN>
-   <PIN pinname="Output 3" visible="1">
-   </PIN>
-   <PIN pinname="Output 4" visible="1">
-   </PIN>
-   <PIN pinname="Output 5" visible="1">
-   </PIN>
-   <PIN pinname="Output 6" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="5595" top="2415">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output 1" dstnodeid="23" dstpinname="Year">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output 2" dstnodeid="23" dstpinname="Month">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output 3" dstnodeid="23" dstpinname="Day">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output 4" dstnodeid="23" dstpinname="Hour">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output 5" dstnodeid="23" dstpinname="Min">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output 6" dstnodeid="23" dstpinname="Sec">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="21">
-   <BOUNDS type="Node" left="5595" top="120" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5595" top="120" width="1425" height="1815">
-   </BOUNDS>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="6">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Date To|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="16" dstpinname="Input 2">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
    <BOUNDS type="Node" left="8310" top="5130" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="8310" top="5130" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|ORDER BY at ASC|" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="|ORDER BY at ASC|">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
@@ -415,7 +271,7 @@
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="1455" top="4485" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="at" encoded="0">
+   <PIN pinname="Input 1" visible="1" slicecount="1" encoded="0" values="at">
    </PIN>
    <PIN pinname="Intersperse" slicecount="1" values="Comma">
    </PIN>
@@ -427,11 +283,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1650" top="3810" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="value" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="value">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
@@ -445,15 +301,39 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1470" top="3090" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="at" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="at">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    </NODE>
    <LINK srcnodeid="36" srcpinname="Output String" dstnodeid="26" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="38">
+   <BOUNDS type="Node" left="3720" top="1275" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3720" top="1275" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Start Time (ISO8061)|">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="37">
+   <BOUNDS type="Node" left="5595" top="1275" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5595" top="1275" width="1215" height="375">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|End Time (ISO8061)|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output String" dstnodeid="15" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="16" dstpinname="Input 2">
    </LINK>
    </PATCH>

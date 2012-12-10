@@ -1,0 +1,399 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="C:\Users\Smakhtin\Documents\GitRepos\Sensocamera-Visualisation\modules\database\SensorManager.v4p" systemname="SensorManager" filename="C:\Users\Smakhtin\Documents\GitRepos\Sensocamera-Visualisation\modules\database\SensorManager.v4p">
+   <BOUNDS type="Window" left="5220" top="0" width="13635" height="15165">
+   </BOUNDS>
+   <NODE systemname="StoreDatapoints (COSM Cache)" filename="StoreDatapoints (COSM Cache).v4p" nodename="StoreDatapoints (COSM Cache)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="285" top="7380" width="5370" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1395" top="0" width="13695" height="16200">
+   </BOUNDS>
+   <PIN pinname="Connection" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Create Table SENSORS" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="name" encoded="0" visible="1">
+   </PIN>
+   <PIN pinname="at" visible="1">
+   </PIN>
+   <PIN pinname="value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
+   <BOUNDS type="Node" left="1230" top="2055" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1230" top="2055" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Request From Server|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="8445" top="3945" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8445" top="3945" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="90451">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Feed ID|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="17" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9045" top="3195" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9045" top="3195" width="1575" height="375">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="accelerometerX">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Datastream">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="25" dstpinname="name">
+   </LINK>
+   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="3480" top="5535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" values="NewLineAutoDetection">
+   </PIN>
+   <PIN pinname="Input" visible="1" encoded="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="3480" top="6090" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" values="Comma">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="3465" top="6690" width="1110" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="12" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output 1" dstnodeid="25" dstpinname="at">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output 2" dstnodeid="25" dstpinname="value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="2745" top="2055" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2745" top="2055" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Insert To Local DB|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Insert">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="270" top="8595" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="270" top="8595" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Success" dstnodeid="10" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="9" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5580" top="8430" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5580" top="8430" width="3165" height="1215">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Status (Insert To Local DB)|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Status" dstnodeid="9" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="GetDatapoints (COSM)" filename="..\..\..\VVVV.Nodes.COSM\GetDatapoints (COSM).v4p" nodename="GetDatapoints (COSM)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="6705" top="4935" width="3585" height="270">
+   </BOUNDS>
+   <PIN pinname="Request" visible="1">
+   </PIN>
+   <PIN pinname="Start Time (Year Month Day Hour Min Sec)" visible="1" slicecount="6" values="2012,11,30,18,0,0">
+   </PIN>
+   <PIN pinname="End Time (Year Month Day Hour Min Sec)" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Network">
+   </PIN>
+   <BOUNDS type="Window" left="17250" top="3975" width="13665" height="6000">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Request">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Feed ID">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="8" dstpinname="Datastream">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <NODE systemname="GetDatapoints (COSM Cach Historical)" filename="GetDatapoints (COSM Cach Historical).v4p" nodename="GetDatapoints (COSM Cach Historical)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="6360" top="11430" width="3645" height="270">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Local">
+   </PIN>
+   <PIN pinname="Date From" visible="1" slicecount="6" values="2012,12,9,16,0,0">
+   </PIN>
+   <PIN pinname="Date To" visible="1" slicecount="6" values="2012,12,9,16,30,0">
+   </PIN>
+   <PIN pinname="Sensor Name" visible="1">
+   </PIN>
+   <PIN pinname="Connection" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="at" visible="1">
+   </PIN>
+   <PIN pinname="Start Time (ISO8061)" visible="1">
+   </PIN>
+   <PIN pinname="End Time (ISO8061)" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="6" dstpinname="Sensor Name">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="4185" top="2055" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4185" top="2055" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Get From Local DB|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="6" dstpinname="SendQuery">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6375" top="12300" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6375" top="12300" width="2445" height="585">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Status (Get From Local DB)|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Status" dstnodeid="4" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="UnixTime (Value)" filename="plugins\ValueUnixTime\ValueUnixTime.csproj" nodename="UnixTime (Value)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="8145" top="13560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Refresh" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="at" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <NODE systemname="GetSession (Value)" filename="plugins\ValueGetSession\ValueGetSession.csproj" nodename="GetSession (Value)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="8145" top="14445" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Max Delay (Seconds)">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="8160" top="15210" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8160" top="15210" width="1590" height="885">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Timestap (UNIX Seconds)|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="0" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="9225" top="13890" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9225" top="13890" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Session Delay (Seconds)|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Max Delay (Seconds)">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="26" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="285" top="5595" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="285" top="5595" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Connection">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="25" dstpinname="Connection">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="6" dstpinname="Connection">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="27" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="9255" top="17475" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9255" top="17475" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Datapoint Bin Size|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output Bin Size" dstnodeid="27" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="29" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9960" top="12570" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9960" top="12570" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="value">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="value" dstnodeid="29" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="37" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7305" top="1170" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7305" top="1170" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Start Time (ISO8061)|" encoded="0">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="8" dstpinname="Start Time (ISO8061)">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="38" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7890" top="1935" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7890" top="1935" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|End Time (ISO8061)|" encoded="0">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output String" dstnodeid="8" dstpinname="End Time (ISO8061)">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="6" dstpinname="Start Time (ISO8061)">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Output String" dstnodeid="6" dstpinname="End Time (ISO8061)">
+   </LINK>
+   </PATCH>
