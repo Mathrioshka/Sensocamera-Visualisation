@@ -357,15 +357,15 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7305" top="1170" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="||">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Start Time (ISO8061)|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Start Time (ISO8061)|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -377,15 +377,15 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7890" top="1935" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="||">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|End Time (ISO8061)|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|End Time (ISO8061)|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -395,5 +395,21 @@
    <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="6" dstpinname="Start Time (ISO8061)">
    </LINK>
    <LINK srcnodeid="38" srcpinname="Output String" dstnodeid="6" dstpinname="End Time (ISO8061)">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="39" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="10335" top="6240" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10335" top="6240" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Server Responce|" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="39" dstpinname="Input String">
    </LINK>
    </PATCH>

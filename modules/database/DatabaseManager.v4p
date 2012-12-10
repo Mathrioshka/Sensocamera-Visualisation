@@ -109,6 +109,8 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Request From Server">
    </LINK>
@@ -127,6 +129,8 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="49" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Insert To Local DB">
    </LINK>
@@ -144,6 +148,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="50" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Get From Local DB">
@@ -209,7 +215,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Start Time (Year Month Day Hour Min Sec)|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Start Time (Year Month Day Hour Min Sec)|">
    </PIN>
    <PIN pinname="Y Input Value" slicecount="6" values="2012,12,10,21,19,0">
    </PIN>
@@ -293,15 +299,15 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7485" top="585" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="90451">
+   <PIN pinname="Y Input Value" slicecount="1" values="91367">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Feed ID|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Feed ID|">
    </PIN>
    </NODE>
    <LINK srcnodeid="57" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Feed ID">
@@ -311,11 +317,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5955" top="6195" width="1530" height="315">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="accelerometerX" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="accelerometerX">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="text">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
@@ -329,11 +335,11 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Session Delay (Seconds)|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Session Delay (Seconds)|">
    </PIN>
    </NODE>
    <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Session Delay (Seconds)">
@@ -341,11 +347,11 @@
    <NODE nodename="IOBox (String)" componentmode="InABox" id="60" systemname="IOBox (String)">
    <BOUNDS type="Node" left="2265" top="8070" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="2265" top="8070" width="2355" height="675">
+   <BOUNDS type="Box" left="2265" top="8070" width="3165" height="240">
    </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="||">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
@@ -353,5 +359,37 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="47" srcpinname="Status (Insert To Local DB)" dstnodeid="60" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="61" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3120" top="7620" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3120" top="7620" width="3000" height="240">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="Status (Get From Local DB)" dstnodeid="61" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="62" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2250" top="8655" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2250" top="8655" width="4185" height="1395">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="Server Responce" dstnodeid="62" dstpinname="Input String">
    </LINK>
    </PATCH>
