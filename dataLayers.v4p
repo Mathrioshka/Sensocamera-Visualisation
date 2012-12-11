@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="E:\Dropbox\Mathrioshka Project\SensoCamera\InfoModel\VVVVLayers\dataLayers.v4p" systemname="dataLayers" filename="E:\Dropbox\Mathrioshka Project\SensoCamera\InfoModel\VVVVLayers\dataLayers.v4p">
+   <PATCH nodename="E:\SmartGit 3\bin\Sensocamera-Visualisation\dataLayers.v4p" systemname="dataLayers" filename="E:\Dropbox\Mathrioshka Project\SensoCamera\InfoModel\VVVVLayers\dataLayers.v4p">
    <BOUNDS type="Window" left="9690" top="0" width="17310" height="17550">
    </BOUNDS>
    <NODE id="8" nodename="Fill (EX9.RenderState)" systemname="Fill (EX9.RenderState)">
@@ -223,8 +223,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Spread Count">
-   </LINK>
-   <LINK srcnodeid="32" srcpinname="Transform Out" dstnodeid="28" dstpinname="Transform">
    </LINK>
    <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="36">
    <BOUNDS type="Node" left="8580" top="14775" width="100" height="100">
@@ -983,6 +981,8 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Humidity">
+   </PIN>
    </NODE>
    <LINK srcnodeid="106" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Length">
    </LINK>
@@ -1739,9 +1739,9 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="PointBox">
    </PIN>
@@ -1782,7 +1782,7 @@
    </LINK>
    <LINK srcnodeid="190" srcpinname="Output" dstnodeid="18" dstpinname="Layer 1">
    </LINK>
-   <NODE systemname="ConcentrateParticle01" filename="maxpatch\ConcentrateParticle01.v4p" nodename="maxpatch\ConcentrateParticle01.v4p" componentmode="InAWindow" id="191">
+   <NODE systemname="ConcentrateParticle01" filename="maxpatch\ConcentrateParticle01.v4p" nodename="maxpatch\ConcentrateParticle01.v4p" componentmode="Hidden" id="191">
    <BOUNDS type="Node" left="18555" top="16395" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Gas Layer" visible="1">
@@ -1949,9 +1949,9 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Gas">
    </PIN>
@@ -2255,6 +2255,8 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="245" srcpinname="Mesh" dstnodeid="244" dstpinname="Mesh">
    </LINK>
@@ -2359,7 +2361,7 @@
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="254">
    <BOUNDS type="Node" left="28920" top="14595" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="-0.45" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="-0.45">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -4656,7 +4658,7 @@
    </LINK>
    <LINK srcnodeid="458" srcpinname="Output" dstnodeid="167" dstpinname="Texture">
    </LINK>
-   <NODE systemname="MagneticVertexes" filename="maxpatch\MagneticVertexes.v4p" nodename="maxpatch\MagneticVertexes.v4p" componentmode="InAWindow" id="463">
+   <NODE systemname="MagneticVertexes" filename="maxpatch\MagneticVertexes.v4p" nodename="maxpatch\MagneticVertexes.v4p" componentmode="Hidden" id="463">
    <BOUNDS type="Node" left="21075" top="16410" width="1875" height="270">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -4669,7 +4671,7 @@
    </PIN>
    <PIN pinname="Helpers" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Window" left="14445" top="1260" width="13980" height="16485">
+   <BOUNDS type="Window" left="13245" top="1260" width="15180" height="16485">
    </BOUNDS>
    <PIN pinname="Bin Size" visible="1" slicecount="1" values="-1">
    </PIN>
@@ -4982,28 +4984,6 @@
    </NODE>
    <LINK srcnodeid="490" srcpinname="Output String" dstnodeid="491" dstpinname="Send String">
    </LINK>
-   <NODE systemname="ReplaceChannels (ParticlesGPU Filter)" filename="..\..\..\..\..\SmartGit 3\bin\ParticlesGPU-Modular\ReplaceChannels (ParticlesGPU Filter).v4p" nodename="ReplaceChannels (ParticlesGPU Filter)" componentmode="Hidden" id="461">
-   <BOUNDS type="Node" left="5370" top="36255" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input (XYZW)" visible="1">
-   </PIN>
-   <PIN pinname="Input 2 (XYZW)" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="SizeXY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="462" srcpinname="Texture Out" dstnodeid="461" dstpinname="Input 2 (XYZW)">
-   </LINK>
-   <LINK srcnodeid="459" srcpinname="Y Output Value" dstnodeid="461" dstpinname="ReplaceXYZW ">
-   </LINK>
-   <LINK srcnodeid="460" srcpinname="Y Output Value" dstnodeid="461" dstpinname="SizeXY">
-   </LINK>
-   <LINK srcnodeid="461" srcpinname="Texture Out" dstnodeid="458" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="457" srcpinname="Output" dstnodeid="461" dstpinname="Input (XYZW)">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="494" systemname="IOBox (String)">
    <BOUNDS type="Node" left="5655" top="390" width="0" height="0">
    </BOUNDS>
@@ -5101,7 +5081,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="21735" top="13965" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="6.11">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.13">
    </PIN>
    <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
@@ -5291,7 +5271,7 @@
    <LINK srcnodeid="513" srcpinname="Y Output Value" dstnodeid="463" dstpinname="SesionBinSizes">
    </LINK>
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="514">
-   <BOUNDS type="Node" left="13905" top="9825" width="100" height="100">
+   <BOUNDS type="Node" left="7095" top="14820" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -5303,7 +5283,7 @@
    <LINK srcnodeid="513" srcpinname="Y Output Value" dstnodeid="514" dstpinname="Select">
    </LINK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="515">
-   <BOUNDS type="Node" left="13725" top="7590" width="100" height="100">
+   <BOUNDS type="Node" left="8010" top="13815" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -5313,7 +5293,7 @@
    <LINK srcnodeid="513" srcpinname="Y Output Value" dstnodeid="515" dstpinname="Input">
    </LINK>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="516">
-   <BOUNDS type="Node" left="13680" top="9135" width="100" height="100">
+   <BOUNDS type="Node" left="7065" top="14280" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
@@ -5329,7 +5309,7 @@
    <LINK srcnodeid="516" srcpinname="Output" dstnodeid="514" dstpinname="Input">
    </LINK>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="517">
-   <BOUNDS type="Node" left="7590" top="14400" width="100" height="100">
+   <BOUNDS type="Node" left="7110" top="15270" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -5352,7 +5332,7 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="AccelerometerCompas" filename="Modules\AccelerometerCompas.v4p" nodename="Modules\AccelerometerCompas.v4p" componentmode="InAWindow" id="521">
+   <NODE systemname="AccelerometerCompas" filename="Modules\AccelerometerCompas.v4p" nodename="Modules\AccelerometerCompas.v4p" componentmode="Hidden" id="521">
    <BOUNDS type="Node" left="24030" top="12975" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Accelerometer+Comaps" visible="1">
@@ -5385,10 +5365,10 @@
    </PIN>
    <PIN pinname="BinSize" slicecount="1" values="2">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="267" srcpinname="Output" dstnodeid="234" dstpinname="VerticesXYZ">
-   </LINK>
-   <LINK srcnodeid="234" srcpinname="Layer" dstnodeid="18" dstpinname="Layer 9">
    </LINK>
    <LINK srcnodeid="520" srcpinname="Transform Out" dstnodeid="252" dstpinname="Transform In">
    </LINK>
@@ -5401,7 +5381,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="30735" top="7005" width="1080" height="375">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Lightnes" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Lightnes">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="15">
    </PIN>
@@ -5417,11 +5397,11 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="45">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Compas" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Compas">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="15">
    </PIN>
@@ -5435,11 +5415,11 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" values="6.59,-10.22,0">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="AccelerometerXYZ" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="AccelerometerXYZ">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="15">
    </PIN>
@@ -5467,7 +5447,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -5481,7 +5461,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.06">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -5553,9 +5533,89 @@
    </BOUNDS>
    <BOUNDS type="Box" left="15435" top="3810" width="1290" height="585">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Barometr" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Barometr">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="15">
    </PIN>
    </NODE>
+   <NODE systemname="ReplaceChannels (ParticlesGPU Filter)" filename="..\ParticlesGPU-Modular\ReplaceChannels (ParticlesGPU Filter).v4p" nodename="ReplaceChannels (ParticlesGPU Filter)" componentmode="Hidden" id="461">
+   <BOUNDS type="Node" left="5370" top="36255" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input (XYZW)" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 (XYZW)" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="SizeXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="462" srcpinname="Texture Out" dstnodeid="461" dstpinname="Input 2 (XYZW)">
+   </LINK>
+   <LINK srcnodeid="459" srcpinname="Y Output Value" dstnodeid="461" dstpinname="ReplaceXYZW ">
+   </LINK>
+   <LINK srcnodeid="460" srcpinname="Y Output Value" dstnodeid="461" dstpinname="SizeXY">
+   </LINK>
+   <LINK srcnodeid="461" srcpinname="Texture Out" dstnodeid="458" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="457" srcpinname="Output" dstnodeid="461" dstpinname="Input (XYZW)">
+   </LINK>
+   <LINK srcnodeid="234" srcpinname="Layer" dstnodeid="18" dstpinname="Layer 9">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="534" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="23460" top="10710" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="23460" top="10710" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="534" srcpinname="Y Output Value" dstnodeid="234" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="535">
+   <BOUNDS type="Node" left="14460" top="4275" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="513" srcpinname="Y Output Value" dstnodeid="535" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Translate (Transform Vector)" nodename="Translate (Transform Vector)" componentmode="Hidden" id="536">
+   <BOUNDS type="Node" left="5190" top="14415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="538">
+   <BOUNDS type="Node" left="4830" top="13110" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="|Magnetic XYZ|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="539" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="4875" top="12720" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4875" top="12720" width="1590" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="(nil)">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="539" srcpinname="Output Enum" dstnodeid="538" dstpinname="Receive String">
+   </LINK>
+   <LINK srcnodeid="538" srcpinname="Input Value" dstnodeid="536" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Transform Out" dstnodeid="28" dstpinname="Transform">
+   </LINK>
    </PATCH>

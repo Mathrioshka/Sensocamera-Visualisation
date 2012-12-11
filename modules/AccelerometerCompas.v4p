@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="E:\Dropbox\Mathrioshka Project\SensoCamera\InfoModel\VVVVLayers\modules\AccelerometerCompas.v4p" systemname="_AccelerometerHelper" filename="C:\Users\Smakhtin\Dropbox\Mathrioshka Project\SensoCamera\Software\Accelerometer Helper\_AccelerometerHelper.v4p">
+   <PATCH nodename="E:\SmartGit 3\bin\Sensocamera-Visualisation\modules\AccelerometerCompas.v4p" systemname="_AccelerometerHelper" filename="C:\Users\Smakhtin\Dropbox\Mathrioshka Project\SensoCamera\Software\Accelerometer Helper\_AccelerometerHelper.v4p">
    <BOUNDS type="Window" left="345" top="7170" width="12585" height="9540">
    </BOUNDS>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="0">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3540" top="15645" width="1680" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="3540" top="15645" width="2400" height="1800">
