@@ -1,0 +1,231 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv33beta15.1.dtd" >
+   <PATCH nodename="C:\Eigene Dateien\Finns Daten\Projekte\VVVV\_GPS_Path\Mercator Projection.v4p">
+   <BOUNDS height="6840" left="10455" top="3675" type="Window" width="6870">
+   </BOUNDS>
+   <NODE id="16" nodename="Ln (Complex)">
+   <BOUNDS height="0" left="5160" top="3210" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input Real" visible="1">
+   </PIN>
+   <PIN pinname="Output Real" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="15" nodename="Sin (Differential)">
+   <BOUNDS height="0" left="5415" top="1425" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Position In" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="4095" top="690" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="3720" top="3570" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="285" left="4095" top="690" type="Box" width="1395">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="inputLongitude">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="54.3367266">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="13" nodename="IOBox (String)">
+   <BOUNDS height="270" left="4050" top="435" type="Node" width="1680">
+   </BOUNDS>
+   <BOUNDS height="240" left="4050" top="435" type="Box" width="1455">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="longitude">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="12" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="375" top="705" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="4020" top="3870" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="375" top="705" type="Box" width="1290">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="inputLatitude">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="10.1314">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="11" nodename="IOBox (String)">
+   <BOUNDS height="270" left="330" top="435" type="Node" width="1560">
+   </BOUNDS>
+   <BOUNDS height="270" left="330" top="435" type="Box" width="1560">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="Latitude">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="10" nodename="Multiply (Value)">
+   <BOUNDS height="0" left="5160" top="4095" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5430" top="3660" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="5910" top="4290" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="5430" top="3660" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Input 2" srcnodeid="9" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="Position In" srcnodeid="14" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="4440" top="1665" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="6900" top="5955" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="4440" top="1665" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="7" nodename="Add (Value)">
+   <BOUNDS height="0" left="5175" top="2220" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Input 1" srcnodeid="8" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Input 2" srcnodeid="15" srcpinname="Position Out">
+   </LINK>
+   <NODE id="6" nodename="Subtract (Value)">
+   <BOUNDS height="0" left="5715" top="2220" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="Input 2" srcnodeid="15" srcpinname="Position Out">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Input 1" srcnodeid="8" srcpinname="Y Output Value">
+   </LINK>
+   <NODE id="5" nodename="Divide (Value)">
+   <BOUNDS height="0" left="5175" top="2700" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Input" srcnodeid="7" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="5" dstpinname="Input 2" srcnodeid="6" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Input Real" srcnodeid="5" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Input 1" srcnodeid="16" srcpinname="Output Real">
+   </LINK>
+   <NODE id="4" nodename="Subtract (Value)">
+   <BOUNDS height="0" left="1605" top="1665" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="855" top="5100" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="6315" top="9840" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="855" top="5100" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="outputX">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="4440" top="5115" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="6615" top="10140" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="4440" top="5115" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="outputY">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1995" top="690" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="4320" top="4170" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="1995" top="690" type="Box" width="1290">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="inputLatitudeCenter">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (String)">
+   <BOUNDS height="270" left="1935" top="420" type="Node" width="1560">
+   </BOUNDS>
+   <BOUNDS height="270" left="1935" top="420" type="Box" width="1800">
+   </BOUNDS>
+   <BOUNDS height="160" left="300" top="300" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Lat. of the map center|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="4" dstpinname="Input 1" srcnodeid="12" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="4" dstpinname="Input 2" srcnodeid="1" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Y Input Value" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Y Input Value" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   </PATCH>
