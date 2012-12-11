@@ -67,7 +67,7 @@
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="750" top="8385" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="750" top="8385" width="2565" height="840">
+   <BOUNDS type="Box" left="750" top="8385" width="4500" height="915">
    </BOUNDS>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
@@ -79,7 +79,7 @@
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input String" slicecount="2" encoded="0" values="textures\DataLayers-2012.12.08-14.39.36.png,textures\ScreenAlpha_2.png">
+   <PIN pinname="Input String" slicecount="2" encoded="0" values="textures\Background.png,textures\ScreenAlpha_2.png">
    </PIN>
    </NODE>
    <NODE systemname="Sprite" filename="modules\Sprite.v4p" nodename="modules\Sprite.v4p" componentmode="Hidden" id="15">
@@ -335,7 +335,7 @@
    </PIN>
    <PIN pinname="Filename" slicecount="1" encoded="0" values="textures\ButtonGrid.png">
    </PIN>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Render Size" visible="1">
    </PIN>
@@ -349,11 +349,9 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="0.51">
+   <PIN pinname="X" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="33" srcpinname="Transform Out" dstnodeid="32" dstpinname="Transform In">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="34" systemname="IOBox (String)">
    <BOUNDS type="Node" left="8790" top="5655" width="0" height="0">
    </BOUNDS>
@@ -683,5 +681,7 @@
    <LINK srcnodeid="54" srcpinname="Mouse" dstnodeid="3" dstpinname="Mouse">
    </LINK>
    <LINK srcnodeid="54" srcpinname="Mouse" dstnodeid="19" dstpinname="Mouse">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Transform Out" dstnodeid="32" dstpinname="Transform In">
    </LINK>
    </PATCH>
